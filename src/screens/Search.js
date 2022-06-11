@@ -4,8 +4,6 @@ import { View, Text, FlatList, Image, TouchableOpacity, Modal, SafeAreaView, Sty
 import SearchBox from '../../src/screenComponents/SearchBox';
 
 
-
-
 function ShowGrid() {
     //Hook do pokazania / schowania modal view
     const [getModal, setModal] = React.useState(false)
@@ -21,8 +19,8 @@ function ShowGrid() {
     }
     //Hook do get / set pobranych danych (zdjec)
     const [data, setData] = React.useState([])
-    const window = useWindowDimensions()
     
+    const window = useWindowDimensions()
     
     //Pobieranie zdjec
     React.useEffect(() => {

@@ -8,11 +8,11 @@ import Search from './src/screens/Search';
 
 
 const Tab = createBottomTabNavigator();
+
 function MyTabs() 
 {
   return (
     <Tab.Navigator
-    
       initialRouteName="Feed"
       screenOptions=
       {{

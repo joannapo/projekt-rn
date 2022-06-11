@@ -12,7 +12,7 @@ const divider = () => {
 }
 
 function Feed() {
-
+  // Hook dla danych(zdjec) - zmienna ktora przechowuje zdj
   const [data, setData] = React.useState([])
   
   React.useEffect(() => {
@@ -28,9 +28,9 @@ function Feed() {
 
   const renderItem = ({ item }) => {
     return (
-      <View style={styles.container}>
+      <View >
         <Image style={styles.Image} source={{ uri: item.url }} />
-        <Text>{item.title}</Text>
+        <Text style={styles.itemText}>{item.title}</Text>
       </View>
     )
   }
@@ -59,25 +59,12 @@ const styles = StyleSheet.create
       MainContainer: {
         flex: 1,
       },
-      listItem: {
-        paddingLeft: 12,
-        paddingTop: 10,
-        paddingBottom: 10,
-      },
       itemText: {
-        fontSize: 24,
+        fontSize: 20,
         color: 'black',
-        fontFamily: 'Cochin',
+        fontFamily: 'Arial',
+        margin: 5,
       },
-      activityIndicator: {
-        position: 'absolute',
-        alignItems: 'center',
-        justifyContent: 'center',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-      }
     }
   );
 
